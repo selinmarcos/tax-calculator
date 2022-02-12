@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155975576-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-155975576-2');
+</script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La mejór Calculadora Tributaria, calcula tu deuda tributaria de forma automatica GRATIS y Descargalo en PDF ">
+    <meta name="keywords" content="calculadora tributaria Bolivia, calculo de deuda tributaria, como se calcula la deuda tributaria en Bolivia">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- MOMENT.JS para convertir a years meses y dias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+    <!-- <script
+        src="https://raw.githubusercontent.com/codebox/moment-precise-range/master/moment-precise-range.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- date picker spanish -->
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/gijgo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/js/messages/messages.es-es.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css">
+    <!-- Fonts google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+    <title>Calculadora Tributaria Bolivia</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="sticky-top">
+                    
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- cuadrado -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3029952236233942" data-ad-slot="4424519803"
+                        data-ad-format="vertical" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+
+                </div>
+            </div>
+            <div class="col-md-8 text-justify">
+                 <h1><img class="calc" src="calculadora.png" alt="Calculadora Tributaria Bolivia">Calculadora Tributaria Bolivia <img src="bolivia.png" alt="Calculadora Tributaria Bolivia"></h1>
+                <div class="container col-md-7 col-xs-12 col-sm-12  text-justify">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- cuadrado -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-3029952236233942"
+                        data-ad-slot="4424519803"
+                        data-ad-format="horizontal"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                
+                <!-- FORMULARIO BOOTSTRAP -->
+                <div class="text-justify">
+                
+
+                    
+                    <form action="#" class="formulario" autocomplete="nope">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <p class="fechas">Ingrese la fecha de "vencimiento del impuesto" y la "fecha en la que piensa pagar el impuesto" en el siguiente
+                                    formato: MM/DD/AAAA </p>
+                                <div class="row col-12">
+
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <span class="help-block text-muted small-font"> Fecha de vencimiento</span>
+                                        <!-- <input type="text" id="ingresoDate" placeholder="AAAA/MM/DD" /> -->
+                                        <input id="ingresoDate" placeholder="MM/DD/AAAA" required  />
+                                        <div class="col-sm-8 col-md-10 col-lg-6 col-xl-6 mx-auto"  style="display:none;" id="ufv1">
+                                            <input id="ufvV" type="text" class="form-control" disabled>
+                                            <small id="ufvV" class="form-text text-muted">
+                                                UFVv a la fecha segun el BCB. 
+                                            </small>
+                                            <br>
+                                        </div>    
+                                    </div>
+                                    
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <span class="help-block text-muted small-font"> Fecha de pago</span>
+                                        <!-- <input type="text" id="retiroDate" placeholder="AAAA/MM/DD" /> -->
+                                        <input id="retiroDate" placeholder="MM/DD/AAAA" required/>
+                                        <div class="col-sm-8 col-md-10 col-lg-6 col-xl-6 mx-auto" style="display:none;" id="ufv2" >
+                                            <input id="ufvA" type="text" class="form-control" disabled>
+                                            <small id="ufvA" class="form-text text-muted">
+                                                UFVp a la fecha segun el BCB.  
+                                            </small>
+                                        </div>
+                
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-sm-8 col-md-10 col-lg-7 col-xl-6 mx-auto" style="display:none;" id="moraAwake" >
+                                    <div class="row">
+                                       
+                                        <label for="diasMora" class="col-sm-6 col-form-label">Días de Mora: </label>
+                                        <div class="col-sm-6">
+                                          <input type="text" class="form-control" id="diasMora" disabled >
+                                        </div>
+                        
+                                    </div>
+                                </div>                            
+                                <br>
+
+                                    <div class="col-sm-8 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                                        <div class="row">
+                                            <label for="tasaInteres" class="col-sm-6 col-form-label">Tasa de Interes <strong>%</strong>:</label>
+                                            <div class="col-sm-6">
+                                            <input required  onkeypress="return isNumberKey(event,this)" class="form-control" id="tasaInteres" value="4" type="text" aria-describedby="mensajeInteres">
+                                            <small id="mensajeInteres" class="form-text text-muted">
+                                                Tasa de interes 4%, Ley 812 30 de junio de 2016 
+                                            </small>
+                                            </div>
+                                        
+
+                                        </div>
+                    
+                                    </div>
+                                    <br>
+                                    <div class="col-sm-8 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                                        <div class="row">
+                                            <label for="tributoOmitido" class="col-sm-6 col-form-label">Tributo Omitido:</label>
+                                            <div class="col-sm-6">
+                                            <input placeholder="Bs." onkeypress="return isNumberKey(event,this)" type="text" class="form-control" id="tributoOmitido" required>
+                                            </div>
+                                        </div>
+                                
+                                    </div>
+                                    <br>
+
+
+
+                                 
+                                        <div class="row">
+                                            <div class="col-sm-8 col-md-10 col-lg-7 col-xl-6 mx-auto">
+                                                 <p> <strong>(MULTA)</strong> Hubo fuera de plazo ?</p>
+                                                <p>Seleccione "SI" en caso de que el formulario se haya presentado fuera del plazo.</p>
+                                        
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="mult" id="noMulta" value="option1" checked>
+                                                    <label class="form-check-label" for="noMulta">
+                                                    No, no hubo fuera de plazo.
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="mult" id="siPersonaNatural" value="option2">
+                                                    <label class="form-check-label" for="siPersonaNatural">
+                                                    Si, persona natural (150 UFVs)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="mult" id="siPersonaJuridica" value="option3">
+                                                    <label class="form-check-label" for="siPersonaJuridica">
+                                                        Si, persona jurídica (400 UFVs)
+                                                    </label>
+                                                </div> 
+                                            </div>
+                                        </div>
+
+                                                                                                                
+                                    <br>
+                                    <br>
+                                <script data-ad-client="ca-pub-3029952236233942" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12 pad-adjust ">
+                                            <input type="submit" class="btn btn-dark btn-md btn-block" id="validar" value="VALIDAR" onclick="window.location.href='#mostrar'">
+                                        </div>
+                                        <div class="container col-md-7 col-xs-12 col-sm-12  text-justify">
+                                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                            <!-- cuadrado -->
+                                            <ins class="adsbygoogle"
+                                                style="display:block"
+                                                data-ad-client="ca-pub-3029952236233942"
+                                                data-ad-slot="4424519803"
+                                                data-ad-format="rectangle"
+                                                data-full-width-responsive="true"></ins>
+                                            <script>
+                                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                            </script>
+                                        </div>
+                                    </div>
+                                
+
+
+                            </div>
+                        </div>
+                    </form>
+                    <!-- showing results -->
+                        <br>
+                        <br>
+                        <div class="container col-md-7 col-xs-12 col-sm-12  text-justify">
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- cuadrado -->
+                            <ins class="adsbygoogle"
+                                style="display:block"
+                                data-ad-client="ca-pub-3029952236233942"
+                                data-ad-slot="4424519803"
+                                data-ad-format="rectangle"
+                                data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                        <div id="download" style="text-align:left;">
+                        </div>
+                        <table class="table table-striped col-md-12 col-sm-12 col-xs-12" id="tableF" style="display: none;">
+                                <thead class="table-info">
+                                    <tr>
+                                            
+                                        <th colspan="2" class="headFiniquito" scope="colgroup">DEUDA TRIBUTARIA</th>
+                    
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Tributo Omitido:</th>
+                                        <td id="tributoO"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Mantenimiento de Valor:</th>
+                                        <td id='mantenimientoValor'> 
+                                        </td>
+                                        
+                    
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tributo Omitido Actualizado:</th>
+                                        <td id="tributoOmitidoActualizado"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tasa de Interes Anual:</th>
+                                        <td id="tasaA"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Interes Moratorio:</th>
+                                        <td id="interes"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">MULTA:</th>
+                                        <td id="multa"></td>
+                                    </tr>
+                                    <tr id="tota">
+                                        <th scope="row">TOTAL A PAGAR EN EFECTIVO:</th>
+                                        <td id="dt"></td> 
+                                    </tr>
+                                </tbody>
+                        </table>
+                       
+                        <!-- <input type="button" onclick="generate()" value="Export To PDF" /> -->
+
+                
+                    
+
+                </div>
+        
+            </div>
+            <div class="col-md-2">
+                <div class="sticky-top">
+                    
+                    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+                    <!-- cuadrado -->
+                    <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3029952236233942" data-ad-slot="4424519803"
+                        data-ad-format="vertical" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script> -->
+
+                </div>
+        
+            </div>
+        
+        </div>
+    </div>
+
+   
+
+    <script type="text/javascript">
+        /*VALIDACION SOLO NUMEROS CON DOS DECIMALES EN LOS IPUT DE SUELDOS*/
+        function isNumberKey(evt, obj) {
+
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        var value = obj.value;
+        var dotcontains = value.indexOf(".") != -1;
+        if (dotcontains)
+            if (charCode == 46) return false;
+        if (charCode == 46) return true;
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+        }
+
+
+
+
+
+
+        function filterFloat(evt, input) {
+            // Backspace = 8, Enter = 13, ‘0′ = 48, ‘9′ = 57, ‘.’ = 46, ‘-’ = 43
+            var key = window.Event ? evt.which : evt.keyCode;
+            var chark = String.fromCharCode(key);
+            var tempValue = input.value + chark;
+            if (key >= 48 && key <= 57) {
+                if (filter(tempValue) === false) {
+                    return false;
+                } else {
+                    return true;
+                }
+            } else {
+                if (key == 8 || key == 13 || key == 0) {
+                    return true;
+                } else if (key == 46) {
+                    if (filter(tempValue) === false) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                } else {
+                    return false;
+                }
+            }
+        }
+        function filter(__val__) {
+            var preg = /^([0-9]+\.?[0-9]{0,2})$/;
+            if (preg.test(__val__) === true) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
